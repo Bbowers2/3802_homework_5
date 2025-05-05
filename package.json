@@ -1,0 +1,16 @@
+{
+  "name": "3802_homework_5",
+  "version": "1.0.0",
+  "description": "Repository for 3802 Homework 5 questions.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node src/test/regex_exercises.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

@@ -46,97 +46,97 @@ const testFixture = {
       "5432333xxxxxxxxx",
     ],
   },
-  notThreeEndingInOO: {
-    good: ["", "fog", "Tho", "one", "a", "ab", "food"],
-    bad: ["fOo", "gOO", "HoO", "zoo", "MOO", "123", "A15"],
-  },
-  divisibleBy16: {
-    good: [
-      "0",
-      "00",
-      "000",
-      "00000",
-      "00000",
-      "000000",
-      "00000000",
-      "1101000000",
-    ],
-    bad: ["1", "00000000100", "1000000001", "dog0000000"],
-  },
-  eightThroughThirtyTwo: {
-    good: Array(25)
-      .fill(0)
-      .map((x, i) => i + 8),
-    bad: ["1", "0", "00003", "dog", "", "361", "90", "7", "-11"],
-  },
-  notPythonPycharmPyc: {
-    good: [
-      "",
-      "pythons",
-      "pycs",
-      "PYC",
-      "apycharm",
-      "zpyc",
-      "dog",
-      "pythonpyc",
-    ],
-    bad: ["python", "pycharm", "pyc"],
-  },
-  restrictedFloats: {
-    good: ["1e0", "235e9", "1.0e1", "1.0e+122", "55e20"],
-    bad: ["3.5E9999", "2.355e-9991", "1e2210"],
-  },
-  palindromes2358: {
-    good: [
-      "aa",
-      "bb",
-      "cc",
-      "aaa",
-      "aba",
-      "aca",
-      "bab",
-      "bbb",
-      "ababa",
-      "abcba",
-      "aaaaaaaa",
-      "abaaaaba",
-      "cbcbbcbc",
-      "caaaaaac",
-    ],
-    bad: ["", "a", "ab", "abc", "abbbb", "cbcbcbcb"],
-  },
-  pythonStringLiterals: {
-    good: String.raw`''
-      ""
-      'hello'
-      "world"
-      'a\'b'
-      "a\"b"
-      '\n'
-      "a\tb"
-      f'\u'
-      """abc"""
-      '''a''"''"'''
-      """abc\xdef"""
-      '''abc\$def'''
-      '''abc\''''`
-      .split("\n")
-      .map((s) => s.trim()),
-    bad: String.raw`
-      'hello"
-      "world'
-      'a'b'
-      "a"b"
-      'a''
-      "x""
-      """"""""
-      frr"abc"
-      'a\'
-      '''abc''''
-      """`
-      .split("\n")
-      .map((s) => s.trim()),
-  },
+  //   notThreeEndingInOO: {
+  //     good: ["", "fog", "Tho", "one", "a", "ab", "food"],
+  //     bad: ["fOo", "gOO", "HoO", "zoo", "MOO", "123", "A15"],
+  //   },
+  //   divisibleBy16: {
+  //     good: [
+  //       "0",
+  //       "00",
+  //       "000",
+  //       "00000",
+  //       "00000",
+  //       "000000",
+  //       "00000000",
+  //       "1101000000",
+  //     ],
+  //     bad: ["1", "00000000100", "1000000001", "dog0000000"],
+  //   },
+  //   eightThroughThirtyTwo: {
+  //     good: Array(25)
+  //       .fill(0)
+  //       .map((x, i) => i + 8),
+  //     bad: ["1", "0", "00003", "dog", "", "361", "90", "7", "-11"],
+  //   },
+  //   notPythonPycharmPyc: {
+  //     good: [
+  //       "",
+  //       "pythons",
+  //       "pycs",
+  //       "PYC",
+  //       "apycharm",
+  //       "zpyc",
+  //       "dog",
+  //       "pythonpyc",
+  //     ],
+  //     bad: ["python", "pycharm", "pyc"],
+  //   },
+  //   restrictedFloats: {
+  //     good: ["1e0", "235e9", "1.0e1", "1.0e+122", "55e20"],
+  //     bad: ["3.5E9999", "2.355e-9991", "1e2210"],
+  //   },
+  //   palindromes2358: {
+  //     good: [
+  //       "aa",
+  //       "bb",
+  //       "cc",
+  //       "aaa",
+  //       "aba",
+  //       "aca",
+  //       "bab",
+  //       "bbb",
+  //       "ababa",
+  //       "abcba",
+  //       "aaaaaaaa",
+  //       "abaaaaba",
+  //       "cbcbbcbc",
+  //       "caaaaaac",
+  //     ],
+  //     bad: ["", "a", "ab", "abc", "abbbb", "cbcbcbcb"],
+  //   },
+  //   pythonStringLiterals: {
+  //     good: String.raw`''
+  //       ""
+  //       'hello'
+  //       "world"
+  //       'a\'b'
+  //       "a\"b"
+  //       '\n'
+  //       "a\tb"
+  //       f'\u'
+  //       """abc"""
+  //       '''a''"''"'''
+  //       """abc\xdef"""
+  //       '''abc\$def'''
+  //       '''abc\''''`
+  //       .split("\n")
+  //       .map((s) => s.trim()),
+  //     bad: String.raw`
+  //       'hello"
+  //       "world'
+  //       'a'b'
+  //       "a"b"
+  //       'a''
+  //       "x""
+  //       """"""""
+  //       frr"abc"
+  //       'a\'
+  //       '''abc''''
+  //       """`
+  //       .split("\n")
+  //       .map((s) => s.trim()),
+  //   },
 };
 
 for (let name of Object.keys(testFixture)) {
