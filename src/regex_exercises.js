@@ -11,7 +11,8 @@ const regexes = {
   restrictedFloats: /^\d*(.\d+)?[eE][+-]?\d{1,3}$/i,
   palindromes2358:
     /^((([abc])\3)|(([abc])[abc]\5)|(([abc])([abc])[abc]\8\7)|(([abc])([abc])([abc])([abc])\13\12\11\10))$/,
-  pythonStringLiterals: /^ ........ $/,
+  pythonStringLiterals:
+    /^([rRuUbBfF]{1,2})?(?:(?:'''(?:\\.|(?!''')[\s\S])*?'''|"""(?:\\.|(?!""")[\s\S])*?"""|'(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*"))$/,
 };
 
 export function matches(name, string) {
